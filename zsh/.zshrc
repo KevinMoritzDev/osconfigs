@@ -8,3 +8,4 @@ alias gs="git status"
 # Enable command auto-completion
 autoload -U compinit 
 compinit
+eval "$(ssh-agent -s)"
