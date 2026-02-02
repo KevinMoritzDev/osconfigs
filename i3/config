@@ -1,0 +1,29 @@
+# set modifier key (Super / Windows Key) 
+set $mod Mod4
+
+# open terminal 
+bindsym $mod+Return exec alacritty
+
+# Close focused window 
+bindsym $mod+Shift+q kill 
+
+# Start dmenu (application launcher)
+bindsym $mod+d exec dmenu_run
+
+# Reload i3 config 
+bindsym $mod+Shift+r reload
+
+# Window moving 
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# Window Management
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+space floating toggle
+
+# Split view 
+bindsym $mod+v split v
+bindsym $mod+b split h
+
