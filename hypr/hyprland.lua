@@ -40,6 +40,7 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("waybar")
     hl.exec_cmd("mako")                                -- notifications
     hl.exec_cmd("systemctl --user start hyprpolkitagent") -- password popups for GUI apps
+    hl.exec_cmd("hypridle")                            -- auto-lock when away
 end)
 
 
@@ -279,6 +280,7 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen())
 hl.bind(mainMod .. " + W", hl.dsp.exec_cmd("killall -SIGUSR1 waybar")) -- show/hide waybar
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("pidof hyprlock || hyprlock")) -- lock screen
 
 -- Screenshots (saved to ~/Pictures/Screenshots + copied to clipboard)
 hl.bind("Print",         hl.dsp.exec_cmd("~/.config/hypr/scripts/screenshot.sh area"))
