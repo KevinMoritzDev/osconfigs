@@ -376,6 +376,9 @@ hl.window_rule({
     float = true,
 })
 
+-- Don't auto-lock while something is fullscreen (games, videos)
+hl.window_rule({ name = "idle-inhibit-fullscreen", match = { class = ".*" }, idle_inhibit = "fullscreen" })
+
 -- Open apps on fixed workspaces
 hl.window_rule({ name = "firefox-open",  match = { class = "firefox" },                 workspace = "1" })
 hl.window_rule({ name = "discord-open",  match = { class = "discord" },                 workspace = "2" })
