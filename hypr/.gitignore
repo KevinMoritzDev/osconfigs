@@ -1,0 +1,4 @@
+# old/unused files, kept locally only
+hyprland.conf
+*.backup-*
+*.default-generated
